@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | LUXE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">LUXE.</a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn" aria-label="Search">
+                    <i class="ph ph-magnifying-glass"></i>
+                </button>
+                <button class="icon-btn cart-trigger" aria-label="Cart">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Shop Collection</h1>
+                <p class="page-subtitle">Explore our premium selection of curated items.</p>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <!-- Future: Add Filters Here -->
+                <div class="product-grid" id="product-grid">
+                    <!-- Products injected by JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3 class="footer-logo">LUXE.</h3>
+                <p>Redefining premium e-commerce with quality and style.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="#">New Arrivals</a>
+                <a href="#">Best Sellers</a>
+                <a href="#">Accessories</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2025 LUXE E-Commerce. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h3>Your Cart (<span class="cart-total-items">0</span>)</h3>
+                <button class="close-cart" aria-label="Close Cart">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be injected here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <span>Subtotal</span>
+                    <span class="cart-subtotal">$0.00</span>
+                </div>
+                <button class="btn btn-primary btn-block checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="product-modal">
+        <div class="pm-overlay"></div>
+        <div class="pm-wrap">
+            <button class="pm-close" aria-label="Close">&times;</button>
+            <div class="pm-grid">
+                <div class="pm-left">
+                    <img class="pm-image" src="https://via.placeholder.com/640x480?text=Product" alt="Product">
+                </div>
+                <div class="pm-right">
+                    <div class="pm-category muted"></div>
+                    <h2 class="pm-title"></h2>
+                    <p class="pm-desc"></p>
+                    <div class="pm-price" style="font-weight:700;font-size:1.2rem;margin-top:1rem"></div>
+                    <div style="margin-top:1rem;display:flex;gap:.6rem;align-items:center">
+                        <input type="number" min="1" value="1" id="pm-qty" style="width:72px;padding:.4rem;border-radius:6px;border:1px solid #ddd" />
+                        <button class="btn btn-primary pm-add">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="shop.js"></script>
+</body>
+
+</html>

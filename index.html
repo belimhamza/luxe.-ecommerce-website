@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE | Premium E-Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Using Phosphor Icons for a premium look -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">LUXE.</a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn" aria-label="Search">
+                    <i class="ph ph-magnifying-glass"></i>
+                </button>
+                <button class="icon-btn cart-trigger" aria-label="Cart">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-bg">
+                <img src="https://via.placeholder.com/1200x520?text=LUXE+Hero+Banner" alt="Hero Banner">
+            </div>
+            <div class="container hero-content">
+                <h1 class="hero-title">Elevate Your<br>Lifestyle.</h1>
+                <p class="hero-subtitle">Discover our curated collection of premium essentials designed for the modern
+                    individual.</p>
+                <a href="#shop" class="btn btn-primary">Shop Collection</a>
+            </div>
+        </section>
+
+        <section id="shop" class="products-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Latest Arrivals</h2>
+                    <p class="section-desc">Handpicked items just for you.</p>
+                </div>
+                <div class="product-grid" id="product-grid">
+                    <!-- Products will be injected here by JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3 class="footer-logo">LUXE.</h3>
+                <p>Redefining premium e-commerce with quality and style.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="#">New Arrivals</a>
+                <a href="#">Best Sellers</a>
+                <a href="#">Accessories</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2025 LUXE E-Commerce. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h3>Your Cart (<span class="cart-total-items">0</span>)</h3>
+                <button class="close-cart" aria-label="Close Cart">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be injected here -->
+                <div class="empty-cart-msg">Your cart is empty.</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <span>Subtotal</span>
+                    <span class="cart-subtotal">$0.00</span>
+                </div>
+                <button class="btn btn-primary btn-block checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="shop.js"></script>
+</body>
+
+</html>
